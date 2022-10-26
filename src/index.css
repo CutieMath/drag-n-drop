@@ -68,3 +68,8 @@
 .group-title {
   margin-bottom: 10px;
 }
+
+.current {
+  background-color: #242424;
+  color: #242424;
+}

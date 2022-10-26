@@ -2,8 +2,8 @@ import { useState } from "react";
 import DragNDrop from "./components/DragNDrop";
 
 const data = [
-  { title: "group 1", items: ["1", "2", "3", "4"] },
-  { title: "group 2", items: ["5", "6", "7"] },
+  { title: "Group 0", items: ["0", "1", "2", "3"] },
+  { title: "Group 1", items: ["4", "5", "6"] },
 ];
 
 const App = () => {
