@@ -1,55 +1,24 @@
 import React from "react";
 
+const data = [
+  { title: "group 1", items: ["1", "2", "3", "4"] },
+  { title: "group 2", items: ["5", "6", "7"] },
+];
+
 const App = () => {
   return (
     <div className="container">
       <div className="dnd-container">
-        <div className="dnd-group">
-          <div className="group-title">Group 1</div>
-          <div className="dnd-item">
-            <div>
-              <p>Item 1</p>
-            </div>
+        {data.map((group, index) => (
+          <div className="dnd-group" key={index}>
+            <div className="group-title">{group.title}</div>
+            {group.items.map((item, itemIndex) => (
+              <div className="dnd-item" key={itemIndex}>
+                {item}
+              </div>
+            ))}
           </div>
-          <div className="dnd-item">
-            <div>
-              <p>Item 2</p>
-            </div>
-          </div>
-          <div className="dnd-item">
-            <div>
-              <p>Item 3</p>
-            </div>
-          </div>
-          <div className="dnd-item">
-            <div>
-              <p>Item 4</p>
-            </div>
-          </div>
-        </div>
-        <div className="dnd-group">
-          <div className="group-title">Group 2</div>
-          <div className="dnd-item">
-            <div>
-              <p>Item 1</p>
-            </div>
-          </div>
-          <div className="dnd-item">
-            <div>
-              <p>Item 2</p>
-            </div>
-          </div>
-          <div className="dnd-item">
-            <div>
-              <p>Item 3</p>
-            </div>
-          </div>
-          <div className="dnd-item">
-            <div>
-              <p>Item 4</p>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
