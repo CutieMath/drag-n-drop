@@ -1,13 +1,10 @@
-import React from "react";
+import { useState } from "react";
 
-const DragNDrop = () => {
-  const data = [
-    { title: "group 1", items: ["1", "2", "3", "4"] },
-    { title: "group 2", items: ["5", "6", "7"] },
-  ];
+const DragNDrop = ({ data }) => {
+  const [list, setList] = useState(data);
   return (
     <div className="dnd-container">
-      {data.map((group, index) => (
+      {list.map((group, index) => (
         <div className="dnd-group" key={index}>
           <div className="group-title">{group.title}</div>
           {group.items.map((item, itemIndex) => (
