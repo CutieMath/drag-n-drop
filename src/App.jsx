@@ -13,7 +13,7 @@ const App = () => {
           <div className="dnd-group" key={index}>
             <div className="group-title">{group.title}</div>
             {group.items.map((item, itemIndex) => (
-              <div className="dnd-item" key={itemIndex}>
+              <div draggable className="dnd-item" key={itemIndex}>
                 {item}
               </div>
             ))}
