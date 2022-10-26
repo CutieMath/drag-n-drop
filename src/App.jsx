@@ -5,6 +5,7 @@ const App = () => {
     <div className="container">
       <div className="dnd-container">
         <div className="dnd-group">
+          <div className="group-title">Group 1</div>
           <div className="dnd-item">
             <div>
               <p>Item 1</p>
@@ -27,6 +28,7 @@ const App = () => {
           </div>
         </div>
         <div className="dnd-group">
+          <div className="group-title">Group 2</div>
           <div className="dnd-item">
             <div>
               <p>Item 1</p>

@@ -2,7 +2,7 @@
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
-  font-weight: 400;
+  font-weight: bold;
 
   color: black;
   background-color: #242424;
@@ -62,5 +62,8 @@
   display:flex;
   justify-content: center;
   align-items: center;
-  font-weight: bold
+}
+
+.group-title {
+  margin-bottom: 10px;
 }
