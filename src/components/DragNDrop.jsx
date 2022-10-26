@@ -1,21 +1,25 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 const DragNDrop = ({ data }) => {
   const [list, setList] = useState(data);
+  const itemBeenDragged = useRef();
 
-  const handleDragStart = (e, index) => {
-    console.log("dragstart:", e);
+  const handleDragStart = (e, params) => {
+    console.log("dragstart:", params);
+    itemBeenDragged.current = params;
   };
 
   return (
     <div className="dnd-container">
-      {list.map((group, index) => (
-        <div className="dnd-group" key={index}>
+      {list.map((group, groupIndex) => (
+        <div className="dnd-group" key={groupIndex}>
           <div className="group-title">{group.title}</div>
           {group.items.map((item, itemIndex) => (
             <div
               draggable
-              onDragStart={handleDragStart}
+              onDragStart={(e) => {
+                handleDragStart(e, { groupIndex, itemIndex });
+              }}
               className="dnd-item"
               key={itemIndex}
             >
